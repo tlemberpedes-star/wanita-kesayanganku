@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buat Acaa</title>
+<style>
+:root{--bg:#1c1419;--ink:#f6eef1;--mute:#c9a9b8;--pink:#e88aae;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1419;--ink:#f6eef1}}
+:root[data-theme="dark"]{--bg:#1c1419;--ink:#f6eef1}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+body{background:linear-gradient(180deg,#261b22,var(--bg)) fixed}
+main{position:relative;z-index:2;max-width:480px;margin:0 auto;padding:40px 22px 120px;text-align:center}
+h1{font-size:2.5rem;line-height:1.1;margin:0 0 12px;font-weight:400;font-style:italic;user-select:none}
+h2{font-size:1.45rem;font-weight:400;margin:0 0 16px}
+p{color:var(--mute);line-height:1.6;margin:0 0 24px}
+section{display:none}section.on{display:block}
+.count{display:flex;justify-content:center;gap:12px;margin:0 0 32px}
+.count div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 10px;min-width:76px}
+.count b{display:block;font-size:1.9rem;font-weight:400}
+.count span{font-size:.8rem;color:var(--mute)}
+.card{background:rgba(255,255,255,.06);border-radius:18px;padding:22px;margin:0 0 24px;line-height:1.7;min-height:96px;display:grid;place-items:center}
+button{font:inherit;font-size:1.05rem;border:0;border-radius:999px;padding:13px 26px;cursor:pointer;background:var(--pink);color:#2a0a1f;font-weight:700}
+button.g2{background:rgba(255,255,255,.12);color:var(--ink);font-weight:400;display:block;width:100%;margin:0 0 10px;text-align:left;border-radius:16px}
+button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.btns{position:relative;height:110px}
+#y{position:absolute;left:12%;top:0}
+#n{position:absolute;left:62%;top:0;background:rgba(255,255,255,.12);color:var(--ink);font-weight:400}
+nav{position:fixed;z-index:5;left:0;right:0;bottom:0;padding:8px 8px calc(env(safe-area-inset-bottom,0px) + 8px);display:flex;gap:4px;justify-content:center;background:rgba(24,17,22,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,.1)}
+nav button{flex:1;max-width:90px;padding:8px 2px;font-size:.78rem;background:transparent;color:var(--mute);font-weight:400;border-radius:12px}
+nav button.on{background:rgba(232,138,174,.18);color:var(--ink);font-weight:700}
+nav i{display:block;font-style:normal;font-size:1.25rem}
+#arena{position:relative;height:52vh;overflow:hidden;border-radius:18px;background:rgba(255,255,255,.05);margin:0 0 16px;touch-action:manipulation}
+.f{position:absolute;top:-40px;font-size:34px;padding:0;background:none;border-radius:0;line-height:1;animation:fall 3s linear forwards}
+@keyframes fall{to{top:100%}}
+.h{position:fixed;bottom:-30px;z-index:1;pointer-events:none;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.sm{color:var(--mute);font-size:.9rem}
+.lt{white-space:pre-wrap;text-align:left;line-height:1.8;min-height:220px;display:block}
+@media (prefers-reduced-motion:reduce){.h{display:none}}
+</style>
+</head>
+<body>
+<main>
+<section id="t0" class="on">
+<h1 id="ti">Buat kamu wanita kesayangkuu</h1>
+<p>udah begitu lama aku bersama kamu, dan aku masih secinta dan sesayang ini sama kamu.</p>
+<div class="count"><div><b id="d">0</b><span>hari</span></div><div><b id="j">0</b><span>jam</span></div><div><b id="m">0</b><span>menit</span></div></div>
+<div class="card">Makasih yaa udah sabar ngadepin aku, mau sama walaupun aku banyak kurangnya, dan jadi tempat pulang paling nyaman bagiku. makasihh bangett i always love youu<3.</div>
+<h2 id="q">Mau tetap sama aku?</h2>
+<div class="btns" id="b"><button id="y">Mau</button><button id="n">Nggak</button></div>
+<div id="w" class="card" style="display:none;font-size:1.4rem;font-style:italic">hihuu, sayang banget deh sama kamu &#10084;<br><span class="sm">Coba kamu buka tab lain di bawah, ada kejutan lohh.</span></div>
+</section>
+
+<section id="t1">
+<h2>Alasan aku sayang sama kamu</h2>
+<div class="card" id="rs">Pencet tombolnya buat buka satu alasan.</div>
+<button id="rb">Buka alasan</button>
+<p class="sm" id="rc" style="margin-top:16px">0 dari 12 alasan terbuka</p>
+</section>
+
+<section id="t2">
+<h2>Kuis: seberapa kenal aku?</h2>
+<div id="qz"></div>
+</section>
+
+<section id="t3">
+<h2>Tangkap hatinya!</h2>
+<p class="sm" id="gi">Tangkap sebanyak mungkin dalam 20 detik.</p>
+<div id="arena"></div>
+<button id="gb">Mulai</button>
+<p class="sm" id="gs" style="margin-top:14px">Skor terbaik: 0</p>
+</section>
+
+<section id="t4">
+<h2>Surat kecil</h2>
+<div class="card lt" id="lt">Pencet tombol di bawah buat buka suratnya.</div>
+<button id="lb">Buka surat</button>
+</section>
+</main>
+<nav id="nv">
+<button data-t="0" class="on"><i>&#128149;</i>Kita</button>
+<button data-t="1"><i>&#128161;</i>Alasan</button>
+<button data-t="2"><i>&#10067;</i>Kuis</button>
+<button data-t="3"><i>&#127918;</i>Main</button>
+<button data-t="4"><i>&#9993;</i>Surat</button>
+</nav>
+<script>
+// GANTI DUA BARIS INI:
+var NAMA="Acaa";
+var TANGGAL="2023-09-19T00:00:00";
+
+var $=function(i){return document.getElementById(i)};
+$('ti').textContent='Buat '+NAMA;
+function days(){return Math.max(0,Math.floor((Date.now()-new Date(TANGGAL))/86400000))}
+function tick(){
+ var s=Math.max(0,Math.floor((Date.now()-new Date(TANGGAL))/1000));
+ $('d').textContent=Math.floor(s/86400);$('j').textContent=Math.floor(s%86400/3600);$('m').textContent=Math.floor(s%3600/60);
+}
+tick();setInterval(tick,30000);
+
+function heart(){
+ var e=document.createElement('div');e.className='h';e.textContent='\u2764';
+ e.style.left=Math.random()*100+'vw';e.style.fontSize=(14+Math.random()*22)+'px';
+ e.style.color=Math.random()<.5?'#e88aae':'#f2c4d6';e.style.opacity='.45';
+ e.style.animationDuration=(5+Math.random()*5)+'s';
+ document.body.appendChild(e);setTimeout(function(){e.remove()},10500);
+}
+setInterval(heart,600);
+function burst(n){for(var i=0;i<n;i++)setTimeout(heart,i*60)}
+
+// tabs
+$('nv').addEventListener('click',function(e){
+ var b=e.target.closest('button');if(!b)return;
+ document.querySelectorAll('section').forEach(function(s){s.classList.remove('on')});
+ document.querySelectorAll('nav button').forEach(function(k){k.classList.toggle('on',k===b)});
+ $('t'+b.dataset.t).classList.add('on');scrollTo(0,0);
+});
+
+// runaway No
+var n=$('n'),box=$('b');
+function run(e){e.preventDefault();n.style.left=Math.random()*(box.clientWidth-n.offsetWidth)+'px';n.style.top=Math.random()*(box.clientHeight-n.offsetHeight)+'px'}
+n.addEventListener('pointerenter',run);n.addEventListener('pointerdown',run);
+$('y').addEventListener('click',function(){box.style.display='none';$('q').style.display='none';$('w').style.display='grid';burst(40)});
+
+// easter egg
+var tc=0;$('ti').addEventListener('click',function(){if(++tc>=5){tc=0;burst(60)}});
+
+// reasons
+var R=["Kamu ketawa aja udah bikin hariku bagus.","Kamu sabar banget ngadepin aku yang random.","Kamu selalu ada pas aku butuh, bahkan sebelum aku bilang.","Cara kamu cemberut itu lucu, tapi jangan sering-sering ya.","Kamu bikin hal biasa jadi seru.","Suara kamu bikin tenang.","Kamu apa adanya, dan itu cukup banget.","Kamu satu-satunya yang boleh ngabisin makananku.","Kamu bikin aku pengen jadi versi diriku yang lebih baik.","Pelukan kamu itu obat paling manjur.","Kamu ngerti aku walau aku diem.","Karena itu kamu, nggak butuh alasan lain."];
+var ri=0;
+$('rb').addEventListener('click',function(){
+ if(ri>=R.length){$('rs').textContent='Masih banyak lagi, nanti aku bilangin langsung ya.';burst(30);return}
+ $('rs').textContent=R[ri++];$('rc').textContent=ri+' dari '+R.length+' alasan terbuka';
+ if(ri==R.length){$('rb').textContent='Masih ada lagi?';burst(30)}
+});
+
+// quiz
+var Q=[
+ {q:"Kalau ditanya mau makan apa, jawaban aku biasanya...",o:[["Terserah","Bener banget, dan ujungnya kamu juga yang milih."],["Apa aja","Itu artinya terserah juga, hehe."],["Yang kamu mau","Jawaban paling aman sepanjang masa."]]},
+ {q:"Siapa yang paling sering kangen duluan?",o:[["Aku","Iya, ngaku."],["Kamu","Aduh, jangan-jangan iya."],["Barengan","Nah, ini jawaban yang bikin kita sama-sama senyum."]]},
+ {q:"Kalau lagi ngambek, aku maunya...",o:[["Dibiarin dulu","Padahal dalam hati nungguin dibujuk."],["Dipeluk","Siap, langsung dikirim peluk."],["Dibeliin makanan","Nah ini, paling manjur."]]},
+ {q:"Pertanyaan terakhir: kamu sayang aku nggak?",o:[["Sayang banget","Sama. Banget-banget."],["Banget banget banget","Aku nggak bisa ngalahin itu."],["Nggak","Tombol ini sebenernya cuma hiasan, jawabannya tetap sayang."]]}
+];
+var qi=0;
+function rq(){
+ var h='';
+ if(qi>=Q.length){$('qz').innerHTML='<div class="card">Hasil: kamu kenal aku 100%.<br>Dan aku sayang kamu 1000%.</div><button id="qa">Ulangi</button>';$('qa').onclick=function(){qi=0;rq()};burst(40);return}
+ h='<div class="card">'+Q[qi].q+'</div>';
+ Q[qi].o.forEach(function(o,i){h+='<button class="g2" data-i="'+i+'">'+o[0]+'</button>'});
+ $('qz').innerHTML=h;
+}
+$('qz').addEventListener('click',function(e){
+ var b=e.target.closest('.g2');if(!b)return;
+ var r=Q[qi].o[+b.dataset.i][1];
+ $('qz').innerHTML='<div class="card">'+r+'</div><button id="qn">Lanjut</button>';
+ $('qn').onclick=function(){qi++;rq()};
+});
+rq();
+
+// game
+var sc=0,best=0,gt=null,gl=null,left=0;
+function drop(){
+ var f=document.createElement('button');f.className='f';f.textContent='\u2764\uFE0F';
+ f.style.left=Math.random()*(($('arena').clientWidth)-40)+'px';
+ f.style.animationDuration=(2+Math.random()*1.5)+'s';
+ f.onpointerdown=function(e){e.preventDefault();sc++;$('gi').textContent='Skor: '+sc+' | sisa '+left+' detik';f.remove()};
+ $('arena').appendChild(f);setTimeout(function(){f.remove()},4000);
+}
+$('gb').addEventListener('click',function(){
+ clearInterval(gt);clearInterval(gl);sc=0;left=20;$('arena').innerHTML='';$('gb').textContent='Main lagi';
+ $('gi').textContent='Skor: 0 | sisa 20 detik';
+ gt=setInterval(drop,450);
+ gl=setInterval(function(){
+  left--;$('gi').textContent='Skor: '+sc+' | sisa '+left+' detik';
+  if(left<=0){clearInterval(gt);clearInterval(gl);$('arena').innerHTML='';
+   if(sc>best)best=sc;$('gs').textContent='Skor terbaik: '+best;
+   $('gi').textContent='Selesai! Skor kamu '+sc+(sc>=20?'. Jago banget, kayak kamu nangkep hatiku.':'. Coba lagi, pasti bisa.');burst(20)}
+ },1000);
+});
+
+// letter
+var lt=null;
+$('lb').addEventListener('click',function(){
+ clearInterval(lt);
+ var tx='Haii '+NAMA+',\n\nUdah '+days()+' hari sejak kita jadian, dan jujur aku nggak pernah nyesel sehari pun. Gila sih, udah selama itu.\n\nMakasih ya udah jadi kamu. Aku emang suka gabut dan random banget, tapi kamu tetep stay. Kamu tuh rumah buat aku, no debat.\n\nKita santai aja jalannya, slow tapi pasti, asal tetep berdua. Fix kamu orang paling berharga buat aku.\n\nSayang banget,\nAku \u2764';
+ var i=0;$('lt').textContent='';$('lb').textContent='Baca ulang';
+ lt=setInterval(function(){$('lt').textContent=tx.slice(0,++i);if(i>=tx.length){clearInterval(lt);burst(25)}},45);
+});
+</script>
+</body>
+</html>
